@@ -1,12 +1,26 @@
 plugins {
     java
     jacoco
+    id("org.sonarqube") version "4.4.1.3373"
     id("org.springframework.boot") version "3.2.2"
     id("io.spring.dependency-management") version "1.1.4"
 }
 
+sonar {
+    properties {
+        property("sonar.projectKey", "rigifdaga_tutorial-1")
+        property("sonar.organization", "rigifdaga")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
+}
+
 group = "id.ac.ui.cs.advprog"
 version = "0.0.1-SNAPSHOT"
+
+val seleniumJavaVersion = "4.14.1"
+val seleniumJupiterVersion = "5.0.1"
+val webdrivermanagerVersion = "5.6.3"
+val junitJupiterVersion = "5.9.1"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21
@@ -24,11 +38,6 @@ configurations {
 repositories {
     mavenCentral()
 }
-
-val seleniumJavaVersion = "4.14.1"
-val seleniumJupiterVersion = "5.0.1"
-val webdrivermanagerVersion = "5.6.3"
-val junitJupiterVersion = "5.9.1"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
@@ -77,4 +86,9 @@ tasks.test {
 
 tasks.jacocoTestReport {
     dependsOn(tasks.test)
+
+    reports {
+        html.required = true
+        xml.required = true
+    }
 }
