@@ -13,3 +13,5 @@ Saya merasa lebih percaya diri bahwa kode yang saya ketik bisa berjalan sesuai h
 Untuk memastikan bahwa unit test cukup menguji program adalah dengan menggunakan konsep code coverage. Code coverage ini digunakan untuk mengukur persentase kode dalam program yang diuji oleh unit-test. Selain itu, kita juga harus menguji setiap fitur yang ada dalam program agar tidak ada kasus yang terlewat. Menurut saya, 100% code coverage tidak menjamin bahwa kode bebas dari kesalahan atau bug. Oleh karena itu, penting juga untuk memastikan kualitas kode kita.
 
 Ada duplikasi kode pada fungsi CreateProduct_isCorrect(). Hal ini bisa menyulitkan perawatan kode jika ingin melakukan perubahan. Solusinya adalah dengan mengekstraksi kode yang sama ke dalam fungsi utilitas dan memanggilnya dari fungsi tersebut.
+
+<h1>Refleksi Tugas 2</h1>
