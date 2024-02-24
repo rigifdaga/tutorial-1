@@ -42,3 +42,52 @@ Dengan kata lain, implementasi tidak hanya mematuhi prinsip-prinsip CI/CD dengan
 <br>
 
 </details>
+
+<details>
+<summary>Tutorial 3</summary>
+
+### **Explain what principles you apply to your project!**
+**Single Responsibility Principle (SRP):**
+Awalnya saya menggabungkan CarController dan ProductController ke dalam `ProductController.java`. Setelah mengimplementasikan SRP, saya memisahkan CarController karena masing-masing memiliki fungsi yang berbeda. 
+<br>
+
+**Open Closed Principle (OCP):**
+Pada `model`, saya menambahkan metode update sehingga pemanggilan metode tersebut akan menjadi lebih mudah. Hal ini memungkinkan pemanggilan metode yang lebih umum pada repository tanpa perlu modifikasi secara langsung. 
+<br>
+
+**Interface Segregation Principle (ISP):**
+Saya memisahkan interface ProductService dan CarService sehingga dapat membedakan interface antara keduanya. Hal ini memungkinkan moduleritas yang lebih baik daripada menggabungkan keduanya menjadi satu. Pendekatan ini dapat meningkatkan efisiensi dalam mengimplementasikan metode abstrak dan struktur kode menjadi lebih fleksibel. 
+<br>
+
+**Dependency Inversion Principle (DIP):**
+Pada `CarRepository`, saya mengganti objek dari CarServiceImpl yang merupakan kelas konkret menjadi CarService yang merupakan antarmuka. Jadi, prinsip ini memanfaatkan objek yang terhubung dengan antarmuka atau abstraksi, bukan kelas konkret. Hal ini dapat mengurangi atau menghilangkan hubungan antar komponen-komponen kelas konkret yang dapat disebut sebagai *decoupling*. 
+<br>
+
+### **Explain the advantages of applying SOLID principles to your project with examples.**
+- **Single Responsibility Principle (SRP):** kode menjadi lebih terorganisir dengan cara memisahkan tanggung jawab tiap kelas, memudahkan pemeliharan, pemahaman dan komunikasi antar pengembang. 
+<br>
+
+- **Open Closed Principle (OCP):** dapat meningkatkan fleksibilitas dan meminimalkan dampak perubahan. Selain itu, memungkinkan penambahan fitur baru tanpa mengubah kode yang sudah ada. 
+<br>
+
+- **Liskov Substitution Principle (LSP):** dapat mengurangi ketergantungan antar kelas dan memungkinkan polimorfisme yang lebih baik.
+<br>
+
+- **Interface Segregation Principle (ISP):** sama seperti LSP, yaitu dapat memungkinkan polimorfisme yang lebih baik dan mengurangi ketergantungan antar kelas. 
+<br>
+
+- **Dependency Inversion Principle (DIP):** dapat membantu dalam mengurangi dampak perubahan pada satu bagian kode terhadap bagian kode lainnya. 
+<br>
+
+### **Explain the disadvantages of not applying SOLID principles to your project with examples.**
+- **Risiko antara Controller dan Implementasi:** 
+Jika tidak mengikuti DIP dan OCP, dapat mengakibatkan keterikatan yang kuat antara
+controller dan implementasi. Hal ini dapat menghasilkan environment pengujian yang buruk dan sulit untuk beralih antara implementasi untuk pengujian. 
+<br>
+
+- **Kesulitan Pemahaman dan Pemeliharan Kode:**
+Kesulitan dalam memahami dan memelihara kode karena ketidakpatuhan terhadap SRP dan penanganan banyak tanggung jawab oleh `controller`, `repository`, atau `model`. Hal ini dapat menyebabkan *bug*, meningkatkan kompleksitas, dan menyulitkan komunikasi. 
+<br>
+
+- **Ketergantungan Tinggi antara Modul atau Metode:** Jika tidak mengikuti ISP dan LSP, basis kode terikat erat dan kurang fleksibel karena antarmuka, abstraksi, atau kelas dasar dengan metode maupun dependensi yang tidak perlu. 
+</details>
