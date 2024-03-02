@@ -24,6 +24,8 @@ import id.ac.ui.cs.advprog.eshop.enums.OrderStatus;
 import id.ac.ui.cs.advprog.eshop.model.Order;
 import id.ac.ui.cs.advprog.eshop.model.Product;
 import id.ac.ui.cs.advprog.eshop.repository.OrderRepository;
+
+@ExtendWith(MockitoExtension.class)
 public class OrderServiceImplTest {
     @InjectMocks
     OrderServiceImpl orderService;
@@ -143,5 +145,4 @@ public class OrderServiceImplTest {
         List<Order> results = orderService.findAllByAuthor(order.getAuthor().toLowerCase());
         assertTrue(results.isEmpty());
     }
-
 }
