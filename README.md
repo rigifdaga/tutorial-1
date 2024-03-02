@@ -91,3 +91,13 @@ Kesulitan dalam memahami dan memelihara kode karena ketidakpatuhan terhadap SRP 
 
 - **Ketergantungan Tinggi antara Modul atau Metode:** Jika tidak mengikuti ISP dan LSP, basis kode terikat erat dan kurang fleksibel karena antarmuka, abstraksi, atau kelas dasar dengan metode maupun dependensi yang tidak perlu. 
 </details>
+
+<details>
+
+<summary>TUTORIAL 4</summary>
+
+1. Pertama, mari kita bicara tentang keakuratan. Saya merasa cukup yakin dengan tes fungsional yang saya miliki. Saya merasa telah menguji semua kasus tepi dengan menyeluruh dan tes fungsional saya sudah cukup untuk memeriksa apakah semua komponen saya cocok dengan baik. Meski begitu, saya juga berpikir bahwa dengan tes terintegrasi, hal ini bisa diperiksa lebih menyeluruh. Kedua, tentang pemeliharaan. Saya merasa tes saya memberi saya kepercayaan diri untuk merombak kode saya tanpa rasa takut dan sering. Tes saya juga membantu saya untuk menghasilkan desain yang baik. Saya merasa jika jumlah tes unit atau tes terintegrasi saya kurang, saya akan menambahkan lebih banyak. Ketiga, tentang alur kerja produksi. Saya merasa siklus umpan balik saya sudah secepat yang saya inginkan. Saya merasa sudah cukup puas dengan peringatan tentang bug yang saya dapatkan. Saya merasa tidak perlu mengubah hal-hal dulu. Saya juga merasa bahwa dengan meninjau dan merombak tes secara rutin, saya bisa mendapatkan umpan balik lebih cepat. Saya bisa menjalankan sebagian dari suite tes lengkap saat saya membutuhkannya dan saya merasa tidak menghabiskan terlalu banyak waktu menunggu tes berjalan.
+
+2. Tentang prinsip F.I.R.S.T. Saya merasa tes saya telah berhasil mengikuti prinsip ini. Tes saya berjalan sesegera mungkin sehingga tidak mengganggu alur kerja saya. Saya memisahkan tes saya menjadi tes unit dan tes fungsional. Tes saya tidak mengganggu, mengubah status fungsi, atau bergantung pada kasus tes lain. Saya juga menerapkan dummy, mock, setUp, dan tearDown untuk menghindari duplikasi dan membersihkan objek. Tes saya konsisten pada pengulangan. Jika fungsi saya melibatkan pemanggilan fungsi lain, maka saya menggunakan teknik Test Double. Tes saya memvalidasi dirinya sendiri karena mereka memiliki penegasan yang ketat. Tes saya menyeluruh dan tepat waktu karena mereka mencakup semua jalur bahagia dan tidak bahagia dan juga mencakup semua kesalahan dan hasil yang mungkin.
+
+</details>
