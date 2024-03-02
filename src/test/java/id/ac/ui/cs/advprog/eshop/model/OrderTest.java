@@ -7,19 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.ArrayList;
 import java.util.List;
 
-package id.ac.ui.cs.advprog.eshop.model;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.catalina.servlets.DefaultServlet.SortManager.Order;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.internal.matchers.Or;
 
 class OrderTest {
     private List<Product> products;
@@ -60,7 +50,7 @@ class OrderTest {
         assertEquals("Sampo Cap Bambang", order.getProducts().get(0).getProductName());
         assertEquals("Sabun Cap Usep", order.getProducts().get(1).getProductName());
 
-        assertEquals("13652556-012a-4c07-b546-54eb1396d79b", order.getOrderId());
+        assertEquals("13652556-012a-4c07-b546-54eb1396d79b", order.getId());
         assertEquals(1708560000L, order.getOrderTime());
         assertEquals("Safira Sudrajat", order.getAuthor());
         assertEquals("WAITING_PAYMENT", order.getStatus());
